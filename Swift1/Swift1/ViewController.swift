@@ -27,6 +27,7 @@ class ViewController: UIViewController {
 
     @IBAction func clickTapped(_ sender: Any) {
         textMessageLabel.text = tField.text!
+        
     }
 }
 
