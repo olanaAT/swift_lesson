@@ -41,6 +41,14 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VmL-9D-6nR">
+                                <rect key="frame" x="187" y="278" width="37" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="show"/>
+                                <connections>
+                                    <action selector="showSecond:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zHo-Vl-gqO"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -59,11 +67,40 @@
                         <outlet property="messageButton" destination="tbK-3R-wJT" id="1aT-55-Btx"/>
                         <outlet property="tField" destination="9LC-Om-Hkv" id="YJ4-ek-oxB"/>
                         <outlet property="textMessageLabel" destination="4kE-yM-EgD" id="CoY-Kf-6af"/>
+                        <segue destination="vkr-to-B2U" kind="show" identifier="showSecond" id="fNs-hn-K01"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="160.80000000000001" y="57.121439280359823"/>
+        </scene>
+        <!--My View Controller-->
+        <scene sceneID="7HT-qg-wDc">
+            <objects>
+                <viewController id="vkr-to-B2U" customClass="MyViewController" customModule="Swift1" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Zs3-Or-L5s"/>
+                        <viewControllerLayoutGuide type="bottom" id="dz5-rN-cSF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="c3M-pH-jND">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dnr-PT-pon">
+                                <rect key="frame" x="91" y="35" width="34" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="back"/>
+                                <connections>
+                                    <action selector="backTapped:" destination="vkr-to-B2U" eventType="touchUpInside" id="8bx-wz-ryT"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QOT-lJ-2l1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="972" y="57"/>
         </scene>
     </scenes>
 </document>
